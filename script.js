@@ -12,7 +12,7 @@
 (function () {
     function getElementsAsync() {
         return new Promise((resolve, reject) => {
-            let elements = document.querySelectorAll("li[ng-mouseover][ng-repeat]");
+            let elements = document.querySelectorAll('div[style="cursor:pointer;"]');
             let greyElements = document.querySelectorAll(".bg-light.venue-navigation-slot--disabled.ng-scope");
 
             if (elements.length > 0) {
@@ -24,7 +24,7 @@
                 }, 1000);
             } else {
                 const intervalId = setInterval(() => {
-                    elements = document.querySelectorAll("li[ng-mouseover][ng-repeat]");
+                    elements = document.querySelectorAll('div[style="cursor:pointer;"]');
                     greyElements = document.querySelectorAll(".bg-light.venue-navigation-slot--disabled.ng-scope");
 
                     if (elements.length > 0) {
